@@ -1,0 +1,6 @@
+---
+date-str: 13 April 2015
+img: img/timeline/gala.jpg
+title: Galaabend Technik 2015
+text: "Our first release: see <a href=\"http://www.tuwien.ac.at/aktuelles/news_detail/article/9418/\">Galaabend Technik 2015</a><br> We rocked it!"
+---

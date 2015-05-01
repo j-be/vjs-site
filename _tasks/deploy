@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+#_tasks/create_thumbnails.sh
+jekyll build && ssh juri@192.168.1.5 "rm -rf vjs" && scp -r _site/ juri@192.168.1.5:~/vjs
+

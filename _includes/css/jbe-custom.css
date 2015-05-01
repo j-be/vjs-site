@@ -1,0 +1,135 @@
+/* My custom CSS */
+
+section#contact {
+    background-color: #FFF;
+}
+
+section#contact .section-heading {
+    color: #{{ site.color.secondary-dark }};
+}
+
+section#contact img {
+    width: 95%;
+}
+
+@media(min-width:768px) {
+    section#contact img {
+        width: 75%;
+    }
+}
+
+html, body {
+  height: 100%;
+}
+
+header {
+    height:100%;
+    min-height:100%;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #{{ site.color.secondary-dark }};
+}
+
+.dark-bg{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+    min-height: initial;
+}
+.navbar-default .navbar-brand {
+    font-family: "Helvetica Neue",Helvetica,Arial,Sans,cursive;
+    color: #{{ site.color.secondary }};
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #{{ site.color.primary }};
+    background-color: #{{ site.color.primary }};
+}
+
+.navbar-default .navbar-nav > .active>a {
+    border-radius: 0px;
+    background-color: #{{ site.color.secondary }};
+    color: #{{ site.color.primary }};
+}
+
+.navbar-default .nav li a:hover {
+    color: #{{ site.color.secondary }};
+}
+
+.navbar-default .nav li a:focus {
+    color: #fff;
+}
+
+.navbar-brand{
+    padding: 15px;
+    height: initial;
+    text-decoration: none;
+    visibility: hidden;
+}
+
+.navbar-shrink .navbar-brand {
+    visibility: visible;
+    color: #{{ site.color.secondary }};
+    max-height: 51px;
+}
+
+.navbar-nav > li > a {
+    padding: 15px;
+    text-decoration: none;
+}
+
+.navbar-default.navbar-shrink {
+    padding: 0px;
+}
+
+.navbar .navbar-right .page-scroll,
+.navbar .navbar-right .page-scroll:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar .navbar-right .page-scroll:focus {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-shrink .navbar-right .page-scroll,
+.navbar-shrink .navbar-right .page-scroll:focus {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,
+.text-primary, .text-primary:hover {
+    color: #{{ site.color.primary }};
+}
+
+.team-member img {
+    border: none;
+}
+
+header .intro-text .intro-heading {
+    line-height: 124%;
+}
+
+.flex-direction-nav a {
+    height: 50px;
+}
+
+section {
+    padding: 75px;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    margin: 10px;
+}
+
+.flex-control-nav {
+    height: 25px;
+    overflow: auto;
+}
