@@ -89,10 +89,7 @@ a:hover {
 }
 
 .navbar .navbar-right .page-scroll,
-.navbar .navbar-right .page-scroll:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
+.navbar .navbar-right .page-scroll:hover,
 .navbar .navbar-right .page-scroll:focus {
     background-color: rgba(0, 0, 0, 0.7);
 }
