@@ -99,7 +99,7 @@ a:hover {
 
 .navbar-shrink .navbar-right .page-scroll,
 .navbar-shrink .navbar-right .page-scroll:focus {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #{{ site.color.primary }};
 }
 
 .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,
@@ -130,6 +130,40 @@ section {
     background: none;
     border: none;
     font-size: 24pt;
+}
+
+.navbar-default {
+    background-color: transparent;
+}
+
+/*@media(min-width:768px) {
+    section#contact img {
+        width: 75%;
+    }
+}*/
+
+@media(max-width:768px) {
+    .navbar-brand i:before {
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding:7px 14px;
+        border-color: transparent;
+        background-color: #{{ site.color.primary }};
+    }
+
+    .navbar-brand i {
+        padding-top: 5px;
+    }
+
+    .navbar .navbar-right .page-scroll,
+    .navbar .navbar-right .page-scroll:hover,
+    .navbar .navbar-right .page-scroll:focus {
+        background-color: #{{ site.color.primary }};
+    }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #{{ site.color.secondary }};;
 }
 
 /*
