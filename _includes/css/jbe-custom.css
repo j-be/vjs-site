@@ -115,21 +115,36 @@ header .intro-text .intro-heading {
     line-height: 124%;
 }
 
-.flex-direction-nav a {
-    height: 50px;
-}
-
 section {
     padding: 75px 0px;
 }
 
-.gallery img {
+.jbe-gallery img {
     display: block;
     width: 100%;
     margin: 10px;
+}
+
+.blueimp-gallery > .prev,
+.blueimp-gallery > .next {
+    background: none;
+    border: none;
+    font-size: 24pt;
+}
+
+/*
+body:last-child .blueimp-gallery > .play-pause {
+    width: 32px;
+    height: 32px;
+    background-size: 64px 32px;
 }
 
 .flex-control-nav {
     height: 25px;
     overflow: auto;
 }
+
+.flex-direction-nav a {
+    height: 50px;
+}
+*/

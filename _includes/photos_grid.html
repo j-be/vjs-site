@@ -1,19 +1,53 @@
 <!-- Portfolio Grid Section -->
-    <section class="bg-light-gray">
+    <section id="photos" class="bg-light-gray">
         <div class="container">
-            <div id="photos" class="row">
+            <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Photos</h2>
                 </div>
             </div>
-            <div class="flexslider gallery">
-                <ul class="slides">
-                    {% loop_directory directory:img/gallery iterator:image filter:*.jpg sort:descending %}
-                        <li>
-                            <img src="{{ image }}">
-                        </li>
+            <div id="links" class="jbe-gallery">
+                <div class="row">
+                    <h3>Beginnings @ Bela's</h3>
+                    {% loop_directory directory:img/gallery/beginnings iterator:image filter:*.jpg sort:ascending %}
+                        <div class="col-xs-6 col-sm-4 col-md-2">
+                            <a href="{{ image }}" title="Beginnings @ Bela's">
+                                <img src="{{ image | replace: 'beginnings', 'beginnings/thumbnails'}}">
+                            </a>
+                        </div>
                     {% endloop_directory %}
-                </ul>
+                </div>
+                <div class="row">
+                    <h3>Arsenal Objekt 219</h3>
+                    {% loop_directory directory:img/gallery/arsenal iterator:image filter:*.jpg sort:ascending %}
+                        <div class="col-xs-6 col-sm-4 col-md-2">
+                            <a href="{{ image }}" title="Arsenal Objekt 219">
+                                <img src="{{ image | replace: 'arsenal', 'arsenal/thumbnails'}}">
+                            </a>
+                        </div>
+                    {% endloop_directory %}
+                </div>
+                <div class="row">
+                    <h3>Galaabend Technik 2015</h3>
+                    {% loop_directory directory:img/gallery/galaabend-technik-2015 iterator:image filter:*.jpg sort:ascending %}
+                        <div class="col-xs-6 col-sm-4 col-md-2">
+                            <a href="{{ image }}" title="Galaabend Technik 2015">
+                                <img src="{{ image | replace: 'galaabend-technik-2015', 'galaabend-technik-2015/thumbnails'}}">
+                            </a>
+                        </div>
+                    {% endloop_directory %}
+                </div>
             </div>
         </div>
+
+        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev"><i class="fa fa-chevron-left"></i></a>
+            <a class="next"><i class="fa fa-chevron-right"></i></a>
+            <a class="close"><i class="fa fa-times"></i></a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+        </div>
+
     </section>

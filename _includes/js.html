@@ -12,12 +12,24 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/agency.js" | prepend: site.baseurl }}"></script>
 
-    <!-- Flexslider Library  -->
-    <script src="{{ "/js/jquery.flexslider.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            $('.flexslider').flexslider({
-                animation: "slide"
-            });
-        });
+    <!-- Blueimp gallery  -->
+    <script src="{{"/js/blueimp-gallery.min.js" | prepend: site.baseurl }}"></script>
+    <script>
+    document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+
+/*    document.getElementById('gallery-header').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = document.getElementById('links').getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };*/
     </script>
