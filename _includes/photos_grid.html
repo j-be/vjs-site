@@ -7,36 +7,19 @@
                 </div>
             </div>
             <div id="links" class="jbe-gallery">
-                <div class="row">
-                    <h3>Beginnings @ Bela's</h3>
-                    {% loop_directory directory:img/gallery/beginnings iterator:image filter:*.jpg sort:ascending %}
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="{{ image }}" title="Beginnings @ Bela's">
-                                <img src="{{ image | replace: 'beginnings', 'beginnings/thumbnails'}}">
-                            </a>
-                        </div>
-                    {% endloop_directory %}
-                </div>
-                <div class="row">
-                    <h3>Arsenal Objekt 219</h3>
-                    {% loop_directory directory:img/gallery/arsenal iterator:image filter:*.jpg sort:ascending %}
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="{{ image }}" title="Arsenal Objekt 219">
-                                <img src="{{ image | replace: 'arsenal', 'arsenal/thumbnails'}}">
-                            </a>
-                        </div>
-                    {% endloop_directory %}
-                </div>
-                <div class="row">
-                    <h3>Galaabend Technik 2015</h3>
-                    {% loop_directory directory:img/gallery/galaabend-technik-2015 iterator:image filter:*.jpg sort:ascending %}
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="{{ image }}" title="Galaabend Technik 2015">
-                                <img src="{{ image | replace: 'galaabend-technik-2015', 'galaabend-technik-2015/thumbnails'}}">
-                            </a>
-                        </div>
-                    {% endloop_directory %}
-                </div>
+                {% for cur_gallery in site.galleries %}
+                    <div class="row">
+                        <h3>{{ cur_gallery.name }}</h3>
+                            {% loop_directory directory:img/gallery/ gallery:cur_gallery iterator:image filter:*.jpg sort:ascending %}
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="{{ image }}" title="{{ cur_gallery.name }}">
+                                        {% capture thumbnail_folder %}{{ cur_gallery.folder }}/thumbnails{% endcapture %}
+                                        <img src="{{ image | replace_first: cur_gallery.folder, thumbnail_folder }}" alt="">
+                                    </a>
+                                </div>
+                            {% endloop_directory %}
+                    </div>
+                {% endfor %}
             </div>
         </div>
 

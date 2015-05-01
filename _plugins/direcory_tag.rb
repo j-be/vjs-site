@@ -13,6 +13,7 @@ module Jekyll
             @attributes = {}
 
             @attributes['directory'] = '';
+            @attributes['gallery'] = '';
             @attributes['iterator'] = 'item';
             @attributes['filter'] = 'item';
             @attributes['sort'] = 'ascending';
@@ -36,7 +37,8 @@ module Jekyll
         def render(context)
             context.registers[:loop_directory] ||= Hash.new(0)
 
-            images = Dir.glob(File.join(@attributes['directory'], @attributes['filter']))
+            #p context[@attributes['directory']]['folder']
+            images = Dir.glob(File.join(@attributes['directory'] + context[@attributes['gallery']]['folder'], @attributes['filter']))
 
             if @attributes['sort'].casecmp( "descending" ) == 0
                 # Find files and sort them reverse-lexically. This means

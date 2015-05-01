@@ -12,6 +12,14 @@ color:
   secondary: 9CC7E4
   secondary-dark: 556D7D
 
+# Galleries
+galleries:
+- name: Beginnings @ Bela's
+  folder: beginnings
+- name: Arsenal Objekt 219
+  folder: arsenal
+- name: Galaabend Technik 2015
+  folder: galaabend-technik-2015
 
 teamleaders:
 - name: Horst Eidenberger
