@@ -1,6 +1,6 @@
 ---
 date-str: October 2014
-img:
+img: start.jpg
 title: Kick-off
 text: The project started in October 2014 in the office of Ao.Univ.Prof. Mag. Dr. Horst Eidenberger at the Interactive Media Systems Group of Vienna University of Technology.
 ---
