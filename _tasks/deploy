@@ -1,5 +1,20 @@
 #!/usr/bin/env bash
 
-#_tasks/create_thumbnails.sh
-jekyll build && ssh juri@192.168.1.5 "rm -rf vjs" && scp -r _site/ juri@192.168.1.5:~/vjs
+ARCHIVE=vjs-site.tar
+
+rm -rf _site/$ARCHIVE
+
+_tasks/create_thumbnails.sh
+jekyll build
+
+if [ $? -ne 0 ]
+then
+	echo "ERROR: Jeykll could not build. Not deploying!"
+	exit 1
+fi
+
+tar -cf $ARCHIVE _site/*
+mv $ARCHIVE _site
+
+ssh juri@192.168.1.5 "rm -rf vjs" && scp -r _site/ juri@192.168.1.5:~/vjs
 
