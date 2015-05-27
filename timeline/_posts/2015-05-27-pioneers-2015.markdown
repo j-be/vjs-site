@@ -1,0 +1,6 @@
+---
+date-str: 27 - 29 May 2015
+img: hofburg.jpg
+title: <a href="http://pioneers.io">Pioneers Festival 2015</a>
+text: It was a big honor for us to be invited at <a href="http://pioneers.io">Pioneers Festival 2015</a> at the Hofburg Vienna. We hope that we will leave a big impression on all visitors.
+---
