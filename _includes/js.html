@@ -28,8 +28,9 @@
     <!-- Map -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
     <script>
+        var jumpyLocation = [48.19672, 16.36865];
         // create a map in the "map" div, set the view to a given place and zoom
-        var map = L.map('map').setView([48.182047, 16.396636], 14);
+        var map = L.map('map').setView(jumpyLocation, 14);
 
         // add an OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -37,6 +38,6 @@
         }).addTo(map);
 
         // add a marker in the given location, attach some popup content to it and open the popup
-        L.marker([48.182047, 16.396636]).addTo(map)
-            .bindPopup('Virtual Jump Simulator<br/>(Arsenal Objekt 219)');
+        L.marker(jumpyLocation).addTo(map)
+            .bindPopup('Virtual Jump Simulator');
     </script>
