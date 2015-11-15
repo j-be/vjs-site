@@ -21,6 +21,7 @@ galleries:
 - name: Galaabend Technik 2015
   folder: galaabend-technik-2015
 
+# Teamleaders
 teamleaders:
 - name: Horst Eidenberger
   pic: horst.jpg
