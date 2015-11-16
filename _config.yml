@@ -56,6 +56,11 @@ people:
   - title: github
     url: http://github.com/lmaestri
 
+- name: Jonas Engl
+  pic: jonas_e.jpg
+  position: System Developer
+  social:
+
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
 
