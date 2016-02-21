@@ -1,0 +1,27 @@
+<!-- About Section -->
+    <section id="press">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Press</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-2">
+                    <table>
+                        {% for post in site.categories.press %}
+                        <tr>
+                            <td>
+                                {{ post.date | date: "%d %B %Y" }} &nbsp;
+                            </td>
+                            <td>
+                                <a href="{{ post.article-url }}">
+                                <b class="text-uppercase">{{ post.title | replace: "_", " " }}</b></a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
