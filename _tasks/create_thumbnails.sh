@@ -14,8 +14,8 @@ do
 	for i in `ls`
 	do
 		echo $i
-		convert $i -resize 170x $i
-		convert $i -gravity Center  -crop 170x114+0+0 +repage $i
+		convert $i -resize 250x $i
+		convert $i -gravity Center  -crop 250x167+0+0 +repage $i
 	done
 	popd
 	popd
