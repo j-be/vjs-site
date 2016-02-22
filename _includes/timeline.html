@@ -20,6 +20,8 @@
                                     <h4 class="subheading">{% if post.date-str %}{{ post.date-str }}{% else %}{{ post.date | date: "%d %B %Y" }}{% endif %}</h4>
                                     <h4>{{ post.title | replace: "_", " " }}</h4>
                                 </div>
+                            </div>
+                            <div class="timeline-panel timeline-panel-right">
                                 <div class="timeline-body">
                                     <span class="text-muted">{{ post.content }}</span>
                                 </div>

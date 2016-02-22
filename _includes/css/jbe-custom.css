@@ -204,3 +204,14 @@ body:last-child .blueimp-gallery > .play-pause {
     height: 50px;
 }
 */
+
+.timeline > li .timeline-panel-right {
+    float: right;
+    text-align: left;
+}
+
+@media(min-width:1200px) {
+    .timeline > li .timeline-panel-right {
+        padding: 0 20px 20px 20px;
+    }
+}
