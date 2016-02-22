@@ -32,6 +32,9 @@ teamleaders:
   pic: bela.jpg
   position: Chief Engineer
   social:
+  - title: link
+    url: http://www.bela-eckermann.at/
+
 
 # Team names, titles and social links
 people:
